@@ -1,109 +1,116 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-#define T 5
+#define T 6
 
-float calcularPromedio(int,int);
-//void mostrarAlumnos(int[],char[][30],int[],int[],float[],int);
-void mostrarAlumnos(int[],char[][30],int[],int);
-int buscarInt(int[], int, int);
-
+int buscarLibre(int[], int);
+void mostrarAlumnos(int[], char[][20], int[], int[], float[], int);
+float calcularPromedio(int, int);
+void altaAlumno(int[], char[][20], int[], int[], float[], int);
+void modificarAlumno(int[], char[][20], int[], int[], float[], int);
+void bajaAlumno(int[], char[][20], int[], int[], float[], int);
 
 int main()
 {
-    int legajos[T]={1,2,3,4,5};
-    char nombres[T][30]={"Jose", "Juan", "Maria", "Ana", "German"};
-    int nota1[T]={6,4,7,9,3};
-    //int nota2[T]={4,6,8,3,6};
-    //float promedios[T]={};
-    int i;
-    int j;
-    char auxNombres[30];
-    int auxInt;
-
-    /*for(i=0;i<T;i++)
+    char respuesta = "s";
+    int legajo[T]= {1,2,3,4,5};
+    char nombre[T][20]={"Federico", "Daniel", "Andrea", "Laura", "Lautaro"};
+    int nota1[T]={10,7,9,3,5};
+    int nota2[T]={8,5,4,6,8};
+    float promedio[T];
+    int opcion;
+    calcularPromedio(nota1[T],nota2[T]);
+    do
     {
-        printf("Ingrese legajo: ");
-        scanf("%d", &legajos[i]);
-        printf("Ingrese nombre: ");
-        fflush(stdin);
-        gets(nombres[i]);
-        printf("Ingrese nota 1: ");
-        scanf("%d", &nota1[i]);
-        printf("Ingrese nota 2: ");
-        scanf("%d", &nota2[i]);
-        promedios[i]=calcularPromedio(nota1[i],nota2[i]);
-    }*/
+        printf("\n1. ALTAS\n2. MOSTRAR\n3. MODIFICAR\n4.BAJA\n5.ORDENAR (por nombre)\n6.ORDENAR (por )\n7.ORDENAR (por )\n8.ORDENAR (por )\n9. SALIR\nElija una opcion: ");
+        scanf("%d", &opcion);
 
-    for(i=0;i<T-1;i++)
-    {
-       for(j=i+1;j<T;j++)
-       {
-            if(strcmp(nombres[i], nombres[j])>0)
-            {
-                strcpy(auxNombres, nombres[i]);
-                strcpy(nombres[i], nombres[j]);
-                strcpy(nombres[j], auxNombres);
+        switch(opcion)
+        {
+        case 1:
+            altaAlumno(legajo,nombre,nota1,nota2,promedio,T);
+            break;
+        case 2:
+            mostrarAlumnos(legajo,nombre,nota1,nota2,promedio,T);
+            break;
+        case 3:
+            modificarAlumno(legajo,nombre,nota1,nota2,promedio,T);
+            break;
+        case 4:
+            bajaAlumno(legajo,nombre,nota1,nota2,promedio,T);
+            break;
+        case 5:
+        case 6:
+        case 7:
+        case 8:
+        break;
+        }
 
-                auxInt = legajos[i];
-                legajos[i] = legajos[j];
-                legajos[j] = auxInt;
-
-                auxInt = nota1[i];
-                nota1[i] = nota1[j];
-                nota1[j] = auxInt;
-            }
-       }
     }
+    while(opcion!=9);
 
-    //mostrarAlumnos(legajos,nombres,nota1,nota2,promedios,T);
-    mostrarAlumnos(legajos,nombres,nota1,T);
 
-    auxInt = buscarInt(legajos, T, 2);
-    if(auxInt!=-1)
-    {
-        printf("\n%s", nombres[auxInt]);
-    }
-    else
-    {
-        printf("\nLegajo inexistente");
-    }
+
 
     return 0;
 }
 
-float calcularPromedio(int nota1,int nota2)
+int buscarLibre(int legajos[], int tam)
+{
+    int index=-1;
+    int i;
+
+    for(i=0;i<tam;i++)
+    {
+        if(legajos[i]==0)
+        {
+            index=i;
+            break;
+        }
+    }
+
+    return index;
+}
+
+void altaAlumno(int legajos[], char nombres[][20], int nota1[], int nota2[], float promedio[], int tam)
+{
+    int index;
+    index = buscarLibre(legajos, tam);
+        if(index!=-1)
+        {
+            printf("Ingrese legajo: ");
+            scanf("%d", &legajos[index]);
+            printf("Ingrese nombre: ");
+            fflush(stdin);
+            gets(nombres[index]);
+            printf("Ingrese nota 1: ");
+            scanf("%d", &nota1[index]);
+            printf("Ingrese nota 2: ");
+            scanf("%d", &nota2[index]);
+            promedio[index]=calcularPromedio(nota1[index],nota2[index]);
+        }
+        else
+        {
+            printf("No hay cupos disponibles");
+        }
+
+    return index;
+}
+
+float calcularPromedio(int nota1, int nota2)
 {
     float promedio;
-    promedio = (float)(nota1 + nota2)/2;
+    promedio = (float)(nota1+nota2)/2;
     return promedio;
 }
 
-/*void mostrarAlumnos(int legajos[],char nombres[][30],int nota1[],int nota2[],float promedios[],int cantidad)
+void mostrarAlumnos(int legajos[], char nombres[][20], int nota1[], int nota2[], float promedio[], int tam)
 {
     int i;
-    for(i=0;i<cantidad;i++)
+    for(i=0; i<tam; i++)
     {
         if(legajos[i]!=0)
         {
-            printf("\nLegajo: %d",legajos[i]);
-            printf("\nNombre: %s",nombres[i]);
-            printf("\nPrimer nota: %d",nota1[i]);
-            printf("\nSegunda nota: %d",nota2[i]);
-            printf("\nPromedio: %.2f \n",promedios[i]);
-        }
-    }
-}*/
-void mostrarAlumnos(int legajos[],char nombres[][30],int nota1[],int cantidad)
-{
-    int i;
-    for(i=0;i<cantidad;i++)
-    {
-        if(legajos[i]!=0)
-        {
-            printf("\nLegajo: %d",legajos[i]);
-            printf("\nNombre: %s",nombres[i]);
-            printf("\nNota: %d \n",nota1[i]);
+            printf("%d %s %d %d %.2f\n", legajos[i], nombres[i], nota1[i], nota2[i], promedio[i]);
         }
     }
 }
@@ -121,4 +128,74 @@ int buscarInt(int enteros[], int tam, int cual)
         }
     }
     return indice;
+}
+void modificarAlumno(int legajos[], char nombres[][20], int nota1[], int nota2[], float promedio[], int tam)
+{
+    int numeroLegajo;
+    int i;
+    int opcionModificar;
+    int flag = 0;
+
+    printf("\nIngrese legajo a modificar: ");
+    scanf("%d", &numeroLegajo);
+    for (i=0;i<tam;i++)
+    {
+        if(legajos[i]==numeroLegajo)
+        {
+            flag = 1;
+            printf("1. Modificar legajo\n");
+            printf("2. Modificar nombre\n");
+            printf("3. Modificar nota 1\n");
+            printf("4. Modificar nota 2\n");
+            scanf("%d", &opcionModificar);
+
+            switch(opcionModificar)
+            {
+                case 1:
+                    scanf("%d", &legajos[i]);
+                    break;
+                case 2:
+                    gets(nombres[i]);
+                    fflush(stdin);
+                    break;
+                case 3:
+                    scanf("%d", &nota1[i]);
+                    break;
+                case 4:
+                    scanf("%d", &nota2[i]);
+                    break;
+            }
+            promedio[i]=calcularPromedio(nota1[i],nota2[i]);
+        }
+    }
+    if (flag == 0)
+    {
+        printf("Legajo no encontrado\n");
+    }
+}
+
+void bajaAlumno(int legajo[], char nombre[][20], int nota1[], int nota2[], float promedio[], int tam)
+{
+    int borrarLegajo;
+    int i;
+
+    printf("Ingrese legajo a dar de baja: ");
+    scanf("%d", &borrarLegajo);
+
+    for(i=0;i<tam;i++)
+    {
+        if(legajo[i]== borrarLegajo)
+        {
+        legajo[i]=0;
+        strcpy(nombre[i],"");
+        nota1[i]=0;
+        nota2[i]=0;
+        promedio[i]=0;
+        break;
+        }
+        if (i==tam)
+        {
+            printf("No existe este legajo");
+        }
+    }
 }
