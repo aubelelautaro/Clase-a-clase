@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1554730025 source:/home/alumno/Escritorio/asd/main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+
+1554908875 source:/home/alumno/Escritorio/validar cadenas,etc/main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+
