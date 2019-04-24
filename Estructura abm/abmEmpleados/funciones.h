@@ -9,6 +9,7 @@
  * \return Devuelve el numero ingresado
  */
 
+
 int getInt(char mensaje[],int num,int minimo,int maximo);
 
 /** \brief Pide un flotante

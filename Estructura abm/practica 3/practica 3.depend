@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1556074261 source:c:\users\chimuelo\desktop\practica 3\bibliotecavalidar.c
+	<stdio.h>
+	<stdlib.h>
+	"biblotecaValidar.h"
+
+1556070155 c:\users\chimuelo\desktop\practica 3\biblotecavalidar.h
+
+1556067277 source:c:\users\chimuelo\desktop\practica 3\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"biblotecaValidar.h"
+
+1556112536 source:c:\users\alumno\downloads\practicacasa\practica 3\bibliotecavalidar.c
+	<stdio.h>
+	<stdlib.h>
+	"biblotecaValidar.h"
+
+1556070155 c:\users\alumno\downloads\practicacasa\practica 3\biblotecavalidar.h
+
+1556112340 source:c:\users\alumno\downloads\practicacasa\practica 3\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"biblotecaValidar.h"
+

@@ -25,3 +25,30 @@
 
 1556049889 c:\users\usuario\desktop\clase-a-clase-master\estructura abm\abmempleados\funciones.h
 
+1556117922 source:c:\users\alumno\desktop\estructura abm\abmempleados\empleados.c
+	<stdio.h>
+	<ctype.h>
+	<string.h>
+	<conio.h>
+	"funciones.h"
+	"empleados.h"
+
+1556107597 c:\users\alumno\desktop\estructura abm\abmempleados\funciones.h
+
+1556118894 c:\users\alumno\desktop\estructura abm\abmempleados\empleados.h
+
+1556107545 source:c:\users\alumno\desktop\estructura abm\abmempleados\funciones.c
+	<stdio.h>
+	<ctype.h>
+	<string.h>
+	"funciones.h"
+
+1556119267 source:c:\users\alumno\desktop\estructura abm\abmempleados\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<conio.h>
+	<string.h>
+	"funciones.h"
+	"empleados.h"
+

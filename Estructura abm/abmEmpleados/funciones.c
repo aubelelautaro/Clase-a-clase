@@ -43,8 +43,6 @@ int validarEntero(int dato, int min, int max, char mensaje [])
     return dato;
 }
 
-//char getString(char mensaje[],char cadena[])
-
 int esNumerico(char str[])
 {
     int i=0;
