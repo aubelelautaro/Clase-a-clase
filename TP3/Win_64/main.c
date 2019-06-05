@@ -29,7 +29,32 @@ int main()
             case 1:
                 controller_loadFromText("data.csv",listaEmpleados);
                 break;
+            case 2:
+                controller_loadFromBinary();
+                break;
+            case 3:
+                controller_addEmployee();
+                break;
+            case 4:
+                controller_editEmployee();
+                break;
+            case 5:
+                controller_removeEmployee();
+                break;
+            case 6:
+                controller_ListEmployee();
+                break;
+            case 7:
+                controller_sortEmployee();
+                break;
+            case 8:
+                controller_saveAsText();
+                break;
+            case 9:
+                controller_saveAsBinary();
+                break;
         }
     }while(option != 10);
+
     return 0;
 }

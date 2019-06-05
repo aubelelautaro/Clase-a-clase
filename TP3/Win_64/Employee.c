@@ -98,3 +98,12 @@ int employee_getSueldo(Employee* this,int* sueldo)
     return flag;
 }
 
+int employee_setNombre(Employee* this,char* nombre)
+{
+
+}
+
+int employee_setHorasTrabajadas(Employee* this,int horasTrabajadas)
+{
+
+}
