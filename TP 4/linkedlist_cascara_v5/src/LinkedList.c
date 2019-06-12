@@ -42,7 +42,6 @@ int ll_len(LinkedList* this)
     return returnAux;
 }
 
-
 /** \brief  Obtiene un nodo de la lista
  *
  * \param this LinkedList* Puntero a la lista
@@ -64,7 +63,6 @@ static Node* getNode(LinkedList* this, int nodeIndex)
             pNode= pNode->pNextNode;
         }
     }
-
     return pNode;
 }
 
@@ -95,6 +93,45 @@ static int addNode(LinkedList* this, int nodeIndex,void* pElement)
 {
     int returnAux = -1;
 
+    Node* prev;
+    Node* next;
+    Node* nuevoNodo;
+
+    if( this != NULL)
+    {
+        if(nodeIndex >= 0 && nodeIndex <= ll_len(this))
+        {
+            nuevoNodo = (Node*)malloc(sizeof(Node));
+            if(nuevoNodo != NULL)
+            {
+                nuevoNodo->pElement = pElement;
+                nuevoNodo->pNextNode = NULL;
+
+                if(nodeIndex == 0)
+                {
+                    nuevoNodo->pNextNode = this->pFirstNode;
+                    this->pFirstNode = nuevoNodo;
+                }
+                else
+                {
+                    prev = this->pFirstNode;
+                    next = prev->pNextNode;
+
+                    while( nodeIndex > 1)
+                    {
+                        prev  = next;
+                        next  = prev->pNextNode;
+                        nodeIndex--;
+                    }
+
+                    prev->pNextNode = nuevoNodo;//asignas la direccion del nuevo nodo al proximo nodo del anterior
+                    nuevoNodo->pNextNode = next;//asignas al nodo nuevo el nodo siguiente que tenia el nodo anterior
+                }
+                this->size++;
+                returnAux = 0;
+            }
+        }
+    }
     return returnAux;
 }
 
@@ -125,6 +162,11 @@ int ll_add(LinkedList* this, void* pElement)
 {
     int returnAux = -1;
 
+    if(this != NULL && ll_len(this)>=0)
+    {
+        addNode(this,ll_len(this),pElement);
+        returnAux = 0;
+    }
     return returnAux;
 }
 
@@ -139,7 +181,12 @@ int ll_add(LinkedList* this, void* pElement)
 void* ll_get(LinkedList* this, int index)
 {
     void* returnAux = NULL;
-
+    Node* auxNodo;
+    if(this!=NULL && index>=0 && index < ll_len(this))
+    {
+        auxNodo=getNode(this,index);
+        returnAux = auxNodo->pElement;
+    }
     return returnAux;
 }
 
@@ -156,6 +203,7 @@ void* ll_get(LinkedList* this, int index)
 int ll_set(LinkedList* this, int index,void* pElement)
 {
     int returnAux = -1;
+
 
     return returnAux;
 }
