@@ -1,0 +1,218 @@
+# depslib dependency file v1.0
+1557329108 source:c:\users\laucha\downloads\abm-master\abmsocios\funciones.c
+	<stdio.h>
+	<ctype.h>
+	<conio.h>
+	<string.h>
+	"funciones.h"
+
+1557329108 c:\users\laucha\downloads\abm-master\abmsocios\funciones.h
+
+1558049648 source:c:\users\laucha\downloads\abm-master\abmsocios\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<conio.h>
+	<string.h>
+	"funciones.h"
+	"socio.h"
+	"autores.h"
+	"libros.h"
+	"prestamos.h"
+
+1557329108 c:\users\laucha\downloads\abm-master\abmsocios\socio.h
+
+1558041908 source:c:\users\laucha\downloads\abm-master\abmsocios\socio.c
+	<stdio.h>
+	<ctype.h>
+	<string.h>
+	<conio.h>
+	"funciones.h"
+	"libros.h"
+	"prestamos.h"
+	"autores.h"
+	"socio.h"
+
+1557329108 source:c:\users\laucha\downloads\abm-master\abmsocios\autores.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	<conio.h>
+	"funciones.h"
+	"autores.h"
+	"libros.h"
+
+1557329108 c:\users\laucha\downloads\abm-master\abmsocios\autores.h
+
+1557329108 source:c:\users\laucha\downloads\abm-master\abmsocios\libros.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	<conio.h>
+	"funciones.h"
+	"libros.h"
+	"socio.h"
+	"prestamos.h"
+	"autores.h"
+
+1557329108 c:\users\laucha\downloads\abm-master\abmsocios\libros.h
+	"autores.h"
+
+1558049648 source:c:\users\laucha\downloads\abm-master\abmsocios\prestamos.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+	"libros.h"
+	"prestamos.h"
+
+1558048816 c:\users\laucha\downloads\abm-master\abmsocios\prestamos.h
+	"socio.h"
+
+1557299368 source:c:\users\alumno\downloads\abm-master\abmsocios\autores.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	<conio.h>
+	"funciones.h"
+	"autores.h"
+	"libros.h"
+
+1557299368 c:\users\alumno\downloads\abm-master\abmsocios\funciones.h
+
+1557299368 c:\users\alumno\downloads\abm-master\abmsocios\autores.h
+
+1557299368 c:\users\alumno\downloads\abm-master\abmsocios\libros.h
+	"autores.h"
+
+1557299368 source:c:\users\alumno\downloads\abm-master\abmsocios\funciones.c
+	<stdio.h>
+	<ctype.h>
+	<conio.h>
+	<string.h>
+	"funciones.h"
+
+1557329090 source:c:\users\alumno\downloads\abm-master\abmsocios\libros.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	<conio.h>
+	"funciones.h"
+	"libros.h"
+	"socio.h"
+	"prestamos.h"
+	"autores.h"
+
+1557329767 source:c:\users\alumno\downloads\abm-master\abmsocios\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<conio.h>
+	<string.h>
+	"funciones.h"
+	"socio.h"
+	"autores.h"
+	"libros.h"
+	"prestamos.h"
+
+1557299368 c:\users\alumno\downloads\abm-master\abmsocios\socio.h
+
+1557321883 c:\users\alumno\downloads\abm-master\abmsocios\prestamos.h
+	"socio.h"
+
+1557329973 source:c:\users\alumno\downloads\abm-master\abmsocios\socio.c
+	<stdio.h>
+	<ctype.h>
+	<string.h>
+	<conio.h>
+	"funciones.h"
+	"libros.h"
+	"prestamos.h"
+	"autores.h"
+	"socio.h"
+
+1557322491 source:c:\users\alumno\downloads\abm-master\abmsocios\prestamos.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+	"libros.h"
+	"prestamos.h"
+
+1561404827 source:c:\users\laucha\desktop\abmsocios\autores.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	<conio.h>
+	"funciones.h"
+	"autores.h"
+	"libros.h"
+
+1561250531 c:\users\laucha\desktop\abmsocios\funciones.h
+
+1561406597 c:\users\laucha\desktop\abmsocios\autores.h
+
+1561406597 c:\users\laucha\desktop\abmsocios\libros.h
+	"autores.h"
+	"socio.h"
+
+1561406609 source:c:\users\laucha\desktop\abmsocios\libros.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	<conio.h>
+	"funciones.h"
+	"libros.h"
+	"socio.h"
+	"prestamos.h"
+	"autores.h"
+
+1561406597 c:\users\laucha\desktop\abmsocios\socio.h
+
+1561406597 c:\users\laucha\desktop\abmsocios\prestamos.h
+	"socio.h"
+
+1561404846 source:c:\users\laucha\desktop\abmsocios\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<conio.h>
+	<string.h>
+	"funciones.h"
+	"socio.h"
+	"autores.h"
+	"libros.h"
+	"prestamos.h"
+
+1561404827 source:c:\users\laucha\desktop\abmsocios\prestamos.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	"socio.h"
+	"funciones.h"
+	"libros.h"
+	"prestamos.h"
+
+1561404974 source:c:\users\laucha\desktop\abmsocios\socio.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	<conio.h>
+	"funciones.h"
+	"prestamos.h"
+	"libros.h"
+	"autores.h"
+	"socio.h"
+
+1561250009 source:c:\users\laucha\desktop\abmsocios\funciones.c
+	<stdio.h>
+	<ctype.h>
+	<string.h>
+	<conio.h>
+	"funciones.h"
+
